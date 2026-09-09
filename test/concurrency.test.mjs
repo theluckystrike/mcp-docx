@@ -56,7 +56,7 @@ function client(dataHome, key) {
 }
 
 test.skip("two processes, one data dir: 20 concurrent documents all persist with unique references", async () => {
-  const key = "";
+  const key = execFileSync(process.execPath, [join(REPO, "scripts", "sign-license.mjs"), "docx"], { encoding: "utf8" }).trim();
   const sandbox = mkdtempSync(join(tmpdir(), "mcp-docx-conc-"));
   const dataHome = join(sandbox, "data");
   const a = client(dataHome, key);

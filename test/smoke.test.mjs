@@ -168,7 +168,7 @@ test("stdio: initialize, tools/list, business_set, proposal, doc_read, html", as
   assert.equal(list[list.length - 1].kind, "proposal");
 });
 
-test.skip("contract_create says it is a template and not legal advice", async (t) => {
+test("contract_create says it is a template and not legal advice", async (t) => {
   const c = client();
   t.after(() => c.close());
   await init(c);
