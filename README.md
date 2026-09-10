@@ -2,7 +2,7 @@
 
 <!-- mirror-seo:start -->
 
-**MCP server for Word documents: create and edit docx files.** Real Word documents from chat: proposals, contracts, quotes.
+**MCP server for Word documents: creating docx files, and create a Word document from a chat.** Real Word documents from chat: proposals, contracts, quotes.
 
 Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine, or hosted with no install.
 
