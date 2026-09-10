@@ -1,13 +1,45 @@
 # mcp-docx
 
+<!-- mirror-seo:start -->
+
+**MCP server for Word documents: create and edit docx files.** Real Word documents from chat: proposals, contracts, quotes.
+
+Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine, or hosted with no install.
+
+## Install
+
+**Hosted, nothing to install.** Point an MCP client at `https://mcp.zovo.one/mcp/docx` over streamable-http and send `Authorization: Bearer <token>`, where the token is a Pro key or a free anonymous one from <https://mcp.zovo.one/mcp/token>.
+
+**Claude Desktop, one click.** Download `docx.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it.
+
+**From source.** The mirror is self-contained: every `@theluckystrike/*` dependency is vendored, so a fresh clone builds with no extra setup.
+
+```sh
+git clone https://github.com/theluckystrike/mcp-docx.git
+cd mcp-docx
+npm install && npm run build
+```
+
+Then point your client at the built entry point:
+
+```json
+{
+  "mcpServers": {
+    "docx": {
+      "command": "node",
+      "args": ["/absolute/path/to/mcp-docx/dist/index.js"]
+    }
+  }
+}
+```
+
+> `@theluckystrike/mcp-docx` is **not published on npm yet**, so an `npx -y @theluckystrike/mcp-docx` command will fail. The three paths above are the working ones and each is exercised by CI.
+
 ![docx demo](https://raw.githubusercontent.com/theluckystrike/mcp-servers/main/assets/demo-docx.gif)
-
-**One-click install:** download `docx.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it in Claude Desktop.
-
-**Hosted endpoint (no install):** `https://mcp.zovo.one/mcp/docx` (streamable-http; send `Authorization: Bearer <Pro key or anonymous token from https://mcp.zovo.one/mcp/token>`).
 
 Read-only mirror of [mcp-servers/servers/docx](https://github.com/theluckystrike/mcp-servers/tree/main/servers/docx). See [MIRROR.md](MIRROR.md).
 
+<!-- mirror-seo:end -->
 
 Say "write a proposal for Beta Corp, checkout rebuild, 4,500 EUR, three phases" and get a real `.docx` you can send. This MCP server writes Word documents from chat -- proposals, quotes, service agreements, statements of work and letters -- with your letterhead, headings, bullet and numbered lists and tables. It also turns markdown into `.docx`, reads an existing `.docx` back as text and outline, and fills `{{placeholders}}` in a template you already use, keeping every style, table, header and image of the original. Everything runs locally: no upload, no account, no native dependency.
 
