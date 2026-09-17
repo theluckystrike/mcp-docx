@@ -1,6 +1,6 @@
 {
   "name": "mcp-docx",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "MCP server for Word documents: creating docx files, and create a Word document from a chat. Real Word documents from chat: proposals, contracts, quotes.",
   "settings": [
     {
