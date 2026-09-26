@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.theluckystrike/templates",
-  "description": "Reusable docx templates: placeholders for proposals, contracts, quotes, SOWs.",
-  "version": "0.22.3",
+  "name": "io.github.theluckystrike/docx",
+  "description": "Create real Word .docx files from your AI chat: proposals, quotes, contracts, statements of work.",
+  "version": "0.22.2",
   "repository": {
     "url": "https://github.com/theluckystrike/mcp-servers",
     "source": "github",
@@ -14,24 +14,16 @@
       "registryType": "mcpb",
       "identifier": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/docx.mcpb",
       "version": "0.22.0",
+      "fileSha256": "6bddb85b1b4e66bd9c091a85fc9744cf6d70b9db9f140712d986b1626782746a",
       "transport": {
         "type": "stdio"
-      },
-      "environmentVariables": [
-        {
-          "name": "MCP_LICENSE_KEY",
-          "description": "Optional Pro license key (MCPL1....). Verified offline.",
-          "isRequired": false,
-          "isSecret": true
-        }
-      ],
-      "fileSha256": "6bddb85b1b4e66bd9c091a85fc9744cf6d70b9db9f140712d986b1626782746a"
+      }
     }
   ],
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.zovo.one/mcp/templates"
+      "url": "https://mcp.zovo.one/mcp/docx-editor"
     }
   ]
 }
